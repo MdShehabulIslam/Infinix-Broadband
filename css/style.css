@@ -38,3 +38,42 @@
   color: #fff;
   border-radius: 0.75rem;
 }
+
+/* New Code */
+
+/* Footer */
+.footer {
+  background: linear-gradient(45deg, #0043a4, #00a4e4);
+  color: #fff;
+  padding: 50px 0;
+}
+
+.footer .nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 10px;
+  transition: color 0.3s;
+}
+
+.footer .nav-link:hover {
+  color: #f0a500;
+}
+
+.footer p {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+/* Social Media Icons */
+.social-icon {
+  font-size: 24px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  color: #f0a500;
+}
