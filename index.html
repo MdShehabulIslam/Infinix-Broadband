@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
+
   <body>
     <!-- NAVBAR -->
     <section id="navbar">
@@ -126,10 +127,10 @@
     </section>
 
     <!-- HEROES -->
-    <section id="home" class="bg-light py-5">
+    <section id="home" class="bg-light py-5 scroll-offset">
       <div class="container text-center">
         <!-- Heading -->
-        <h1 class="display-3 fw-bold text-primary mb-4">The Speed You Need</h1>
+        <h1 class="display-3 fw-bold text-dark mb-4">The Speed You Need</h1>
         <!-- Description -->
         <p class="lead mb-4 text-muted">
           Experience unparalleled speed and reliability with our cutting-edge
@@ -175,7 +176,7 @@
       <div class="container">
         <!-- Section Header -->
         <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary">Our Key Features</h2>
+          <h2 class="display-4 fw-bold text-dark">Our Key Features</h2>
           <p class="text-muted fs-5">
             Explore what sets us apart and how we deliver exceptional value.
           </p>
@@ -314,7 +315,7 @@
     <section id="packages" class="pricing-section py-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-4 fw-bold">Our Packages</h1>
+          <h2 class="display-4 fw-bold text-dark">Our Packages</h2>
           <p class="text-muted fs-5">
             Choose the best plan that suits your needs.
           </p>
@@ -431,7 +432,7 @@
     <section id="contact" class="bg-light py-5">
       <div class="container">
         <div class="text-center mb-5">
-          <h2 class="fw-bold text-primary">Get in Touch</h2>
+          <h2 class="display-4 fw-bold text-dark">Get in Touch</h2>
           <p class="text-muted fs-5">
             We’d love to hear from you! Reach out to us through the form below
             or contact us directly.
@@ -525,5 +526,17 @@
         </footer>
       </div>
     </section>
+
+    <script>
+      window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 0) {
+          navbar.classList.add('sticky');
+        } else {
+          navbar.classList.remove('sticky');
+        }
+      });
+    </script>
+
   </body>
 </html>
