@@ -10,6 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -30,12 +31,17 @@
   <body>
     <!-- NAVBAR -->
     <section id="navbar">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="./svg/navbar.svg" alt="moveit brand" height="20" />
-            Infinix</a
-          >
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="./svg/navbar.svg"
+              alt="Infinix Brand"
+              height="30"
+              class="me-2"
+            />
+            <span class="fw-bold text-primary">Infinix</span>
+          </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -50,10 +56,18 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#features">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#packages">Packages</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -87,23 +101,24 @@
                     <a class="dropdown-item" href="#">CCTV System Solutions</a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Dedicated Server Hosting</a
+                    <a class="dropdown-item" href="#"
+                      >Dedicated Server Hosting</a
                     >
                   </li>
                 </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
               </li>
             </ul>
-            <form class="d-flex" role="search">
+            <form class="d-flex ms-auto" role="search">
               <input
                 class="form-control me-2"
                 type="search"
                 placeholder="Postal Code"
                 aria-label="Search"
               />
-              <button class="btn btn-outline-success" type="submit">
-                Check
-              </button>
+              <button class="btn btn-primary" type="submit">Check</button>
             </form>
           </div>
         </div>
@@ -111,37 +126,44 @@
     </section>
 
     <!-- HEROES -->
-    <section id="heroes">
-      <div class="px-4 pt-5 my-5 text-center">
-        <h1 class="display-4 fw-bold">The Speed You Need</h1>
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Id dolor mauris
-            gravida hac maximus tempor pretium taciti. Eros accumsan arcu varius
-            ac ultrices laoreet orci mattis. Urna dignissim mus ipsum quis
-            sapien. Curabitur erat parturient lobortis, nibh nullam rhoncus
-            tincidunt litora. Rutrum semper molestie euismod tincidunt justo.
-            Metus laoreet praesent enim viverra fusce purus viverra.
-          </p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <button type="button" class="btn btn-dark btn-lg px-4 me-sm-3">
-              Get Quote
-            </button>
-            <button type="button" class="btn btn-outline-dark btn-lg px-4">
-              Contact Us
-            </button>
-          </div>
+    <section id="home" class="bg-light py-5">
+      <div class="container text-center">
+        <!-- Heading -->
+        <h1 class="display-3 fw-bold text-primary mb-4">The Speed You Need</h1>
+        <!-- Description -->
+        <p class="lead mb-4 text-muted">
+          Experience unparalleled speed and reliability with our cutting-edge
+          technology. Our solutions are designed to deliver maximum performance,
+          ensuring you stay ahead of the competition. Discover the future of
+          connectivity with our state-of-the-art services and features.
+        </p>
+        <!-- Buttons -->
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+          <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">
+            Get Quote
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg px-4">
+            Contact Us
+          </button>
         </div>
-        <div class="overflow-hidden" style="max-height: 30vh">
-          <div class="container px-5">
-            <img
-              src="./images/home.jpg"
-              class="img-fluid border rounded-3 shadow-lg mb-4"
-              alt="Example image"
-              width="500"
-              height="500"
-              loading="lazy"
-            />
+        <!-- Image with Modern Overlay -->
+        <div class="position-relative">
+          <img
+            src="./images/hero.jpg"
+            class="img-fluid rounded-4 shadow-lg"
+            alt="High-speed Internet"
+            width="800"
+            height="500"
+            loading="lazy"
+          />
+          <div
+            class="overlay position-absolute top-50 start-50 translate-middle text-center p-4 rounded-4 shadow-lg"
+          >
+            <h4 class="text-white mb-3">High-Speed Internet</h4>
+            <p class="text-white mb-0">
+              Unlock the full potential of your online experience with our
+              blazing-fast connectivity.
+            </p>
           </div>
         </div>
       </div>
@@ -149,53 +171,77 @@
 
     <!-- FEATURES -->
 
-    <section id="features">
-      <div class="container mt-5">
-        <div class="container px-5 py-5" id="hanging-icons">
-          <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-            <div class="col d-flex align-items-start">
-              <div
-                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-              >
-                <img
-                  src="./svg/mortarboard.svg"
-                  alt="arrow-through-heart image"
-                  height="30"
-                />
-              </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">Professional.</h3>
-                <p>Rutrum semper molestie euismod tincidunt justo.</p>
-              </div>
-            </div>
-            <div class="col d-flex align-items-start">
-              <div
-                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-              >
-                <img
-                  src="./svg/globe-americas.svg"
-                  alt="mortarboard imgae"
-                  height="30"
-                />
-              </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">Countrywide.</h3>
-                <p>Curabitur erat parturient lobortis, nibh nullam rhoncus.</p>
+    <section id="features" class="bg-light py-5">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-primary">Our Key Features</h2>
+          <p class="text-muted fs-5">
+            Explore what sets us apart and how we deliver exceptional value.
+          </p>
+        </div>
+        <!-- Features Grid -->
+        <div class="row g-4">
+          <!-- Feature 1 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="feature-card card shadow border-0 rounded-3">
+              <div class="card-body text-center">
+                <div class="icon-container mb-3">
+                  <img
+                    src="./svg/mortarboard.svg"
+                    alt="Education Icon"
+                    class="feature-icon"
+                  />
+                </div>
+                <h3 class="fs-4 fw-bold text-primary mb-3">
+                  Professional Expertise
+                </h3>
+                <p class="text-muted">
+                  Our team consists of industry experts with years of
+                  experience, ensuring top-notch quality and reliability in
+                  every service we provide.
+                </p>
               </div>
             </div>
-            <div class="col d-flex align-items-start">
-              <div
-                class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"
-              >
-                <img
-                  src="./svg/check2-circle.svg"
-                  alt="check-circle image"
-                  height="30"
-                />
+          </div>
+          <!-- Feature 2 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="feature-card card shadow border-0 rounded-3">
+              <div class="card-body text-center">
+                <div class="icon-container mb-3">
+                  <img
+                    src="./svg/globe-americas.svg"
+                    alt="Global Reach Icon"
+                    class="feature-icon"
+                  />
+                </div>
+                <h3 class="fs-4 fw-bold text-primary mb-3">Global Reach</h3>
+                <p class="text-muted">
+                  We offer services across the globe, ensuring that no matter
+                  where you are, you can access our high-quality solutions.
+                </p>
               </div>
-              <div>
-                <h3 class="fs-2 text-body-emphasis">Easy Installation.</h3>
-                <p>Lorem ipsum odor amet, consectetuer adipiscing elit.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="feature-card card shadow border-0 rounded-3">
+              <div class="card-body text-center">
+                <div class="icon-container mb-3">
+                  <img
+                    src="./svg/check2-circle.svg"
+                    alt="Ease of Installation Icon"
+                    class="feature-icon"
+                  />
+                </div>
+                <h3 class="fs-4 fw-bold text-primary mb-3">
+                  Effortless Installation
+                </h3>
+                <p class="text-muted">
+                  Our solutions are designed for quick and easy installation,
+                  minimizing downtime and maximizing convenience for our
+                  clients.
+                </p>
               </div>
             </div>
           </div>
@@ -204,127 +250,229 @@
     </section>
 
     <!-- TESTIMONIALS -->
-
-    <section id="testimonial">
-      <div class="p-5 text-center bg-body-tertiary">
-        <div class="container py-5">
-          <h2 class="text-body-emphasis">
-            "It's more than I need. We have never had an issue."
-          </h2>
-          <img
-            src="./images/bill.jpg"
-            alt="dog image"
-            class="profile-img mt-5"
-            height="100"
-          />
-          <p class="col-lg-8 mx-auto lead mt-2">John Doe, Australia</p>
+    <section id="testimonial" class="bg-dark text-white py-5">
+      <div class="container">
+        <!-- Testimonial Section -->
+        <div class="text-center mb-5">
+          <div
+            class="bg-white text-dark p-4 rounded shadow-lg mx-auto"
+            style="max-width: 600px"
+          >
+            <blockquote class="blockquote">
+              <p class="mb-0 fs-4">
+                "It's more than I need. We have never had an issue."
+              </p>
+              <footer class="blockquote-footer mt-3">
+                John Doe, <cite title="Source Title">Australia</cite>
+              </footer>
+            </blockquote>
+            <div class="profile mt-4">
+              <img
+                src="./images/bill.jpg"
+                alt="John Doe"
+                class="profile-img rounded-circle shadow-sm"
+                height="100"
+              />
+            </div>
+          </div>
         </div>
 
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-sm-12">
-              <img
-                src="./images/techcrunch.png"
-                alt="Techcrunch Image"
-                height="30"
-              />
-            </div>
-            <div class="col-lg-3 col-sm-12">
-              <img
-                src="./images/mashable.png"
-                alt="Mashable Image"
-                height="30"
-              />
-            </div>
-            <div class="col-lg-3 col-sm-12">
-              <img
-                src="./images/bizinsider.png"
-                alt="Business Insider Image"
-                height="30"
-              />
-            </div>
-            <div class="col-lg-3 col-sm-12">
-              <img src="./images/tnw.png" alt="TNW Image" height="30" />
-            </div>
+        <!-- Logos Section -->
+        <div class="text-center">
+          <h4 class="mb-4">Business Partners</h4>
+          <div class="d-flex justify-content-center flex-wrap">
+            <img
+              src="./images/techcrunch.png"
+              alt="Techcrunch Logo"
+              class="logo mx-3 my-2"
+              height="30"
+            />
+            <img
+              src="./images/mashable.png"
+              alt="Mashable Logo"
+              class="logo mx-3 my-2"
+              height="30"
+            />
+            <img
+              src="./images/bizinsider.png"
+              alt="Business Insider Logo"
+              class="logo mx-3 my-2"
+              height="30"
+            />
+            <img
+              src="./images/tnw.png"
+              alt="TNW Logo"
+              class="logo mx-3 my-2"
+              height="30"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- PACKAGES -->
-    <section id="packages">
+    <section id="packages" class="pricing-section py-5">
       <div class="container">
-        <div class="pricing-header mt-5 p-3 pb-md-4 mx-auto text-center">
-          <h1 class="display-4 fw-normal text-body-emphasis">Our Packages</h1>
-          <p class="fs-5 text-body-secondary">
-            Simple and affordable price plans for you and your family.
+        <div class="text-center mb-5">
+          <h1 class="display-4 fw-bold">Our Packages</h1>
+          <p class="text-muted fs-5">
+            Choose the best plan that suits your needs.
           </p>
         </div>
-        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Gold</h4>
+        <div class="row text-center">
+          <!-- Gold Package -->
+          <div class="col-md-4 mb-4">
+            <div class="card package-card shadow-lg">
+              <div class="card-header bg-gradient-gold text-white py-4">
+                <h4 class="fw-bold">Gold</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $15<small class="text-body-secondary fw-light">/mo</small>
+                <h1 class="pricing-title">
+                  $15<small class="text-muted">/mo</small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li><b>10 Mbps</b> Speed</li>
-                  <li>Public IP - Not Available</li>
-                  <li>Optical Fiber Connection</li>
-                  <li>24/7 Phone and Online Support</li>
-                  <li>2K Youtube and Facebook Stream</li>
+                  <li><i class="fas fa-tachometer-alt"></i> <b>10 Mbps</b></li>
+                  <li>
+                    <i class="fas fa-times-circle"></i> Public IP - Not
+                    Available
+                  </li>
+                  <li>
+                    <i class="fas fa-network-wired"></i> Optical Fiber
+                    Connection
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt"></i> 24/7 Phone and Online
+                    Support
+                  </li>
+                  <li>
+                    <i class="fas fa-tv"></i> 2K YouTube and Facebook Streaming
+                  </li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-outline-dark">
+                <button type="button" class="btn btn-outline-primary btn-lg">
                   Contact Us
                 </button>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm">
-              <div class="card-header py-3">
-                <h4 class="my-0 fw-normal">Platinum</h4>
+
+          <!-- Platinum Package -->
+          <div class="col-md-4 mb-4">
+            <div class="card package-card shadow-lg popular-package">
+              <div class="card-header bg-gradient-primary text-white py-4">
+                <h4 class="fw-bold">Platinum</h4>
+                <span class="badge bg-warning text-dark">Popular</span>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $25<small class="text-body-secondary fw-light">/mo</small>
+                <h1 class="pricing-title">
+                  $25<small class="text-muted">/mo</small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li><b>20 Mbps</b> Speed</li>
-                  <li>Public IP - IPv4/IPv6</li>
-                  <li>Optical Fiber Connection</li>
-                  <li>24/7 Phone and Online Support</li>
-                  <li>2K Youtube and Facebook Stream</li>
+                  <li><i class="fas fa-tachometer-alt"></i><b>20 Mbps</b></li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Public IP - IPv4/IPv6
+                  </li>
+                  <li>
+                    <i class="fas fa-network-wired"></i> Optical Fiber
+                    Connection
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt"></i> 24/7 Phone and Online
+                    Support
+                  </li>
+                  <li>
+                    <i class="fas fa-tv"></i> 4K YouTube and Facebook Streaming
+                  </li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-dark">
+                <button type="button" class="btn btn-primary btn-lg">
                   Sign Up
                 </button>
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card mb-4 rounded-3 shadow-sm border-dark">
-              <div class="card-header py-3 text-bg-dark border-primary">
-                <h4 class="my-0 fw-normal">Diamond</h4>
+
+          <!-- Diamond Package -->
+          <div class="col-md-4 mb-4">
+            <div class="card package-card shadow-lg">
+              <div class="card-header bg-gradient-diamond text-white py-4">
+                <h4 class="fw-bold">Diamond</h4>
               </div>
               <div class="card-body">
-                <h1 class="card-title pricing-card-title">
-                  $35<small class="text-body-secondary fw-light">/mo</small>
+                <h1 class="pricing-title">
+                  $35<small class="text-muted">/mo</small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
-                  <li><b>50 Mbps</b> Speed</li>
-                  <li>Public IP - IPv4/IPv6</li>
-                  <li>Optical Fiber Connection</li>
-                  <li>24/7 Phone and Online Support</li>
-                  <li>4K Youtube and Facebook Stream</li>
+                  <li><i class="fas fa-tachometer-alt"></i> <b>50 Mbps</b></li>
+                  <li>
+                    <i class="fas fa-check-circle"></i> Public IP - IPv4/IPv6
+                  </li>
+                  <li>
+                    <i class="fas fa-network-wired"></i> Optical Fiber
+                    Connection
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt"></i> 24/7 Phone and Online
+                    Support
+                  </li>
+                  <li>
+                    <i class="fas fa-tv"></i> 4K YouTube and Facebook Streaming
+                  </li>
                 </ul>
-                <button type="button" class="w-100 btn btn-lg btn-dark">
+                <button type="button" class="btn btn-outline-primary btn-lg">
                   Sign Up
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="bg-light py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-primary">Get in Touch</h2>
+          <p class="text-muted fs-5">
+            We’d love to hear from you! Reach out to us through the form below
+            or contact us directly.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-info">
+              <h4 class="fw-bold">Contact Information</h4>
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fas fa-map-marker-alt"></i> 36 Ridge Road, St. John's,
+                  NL, Canada
+                </li>
+                <li><i class="fas fa-phone-alt"></i> +1 709 687 4395</li>
+                <li><i class="fas fa-envelope"></i> mohammadsi@mun.ca</li>
+              </ul>
             </div>
           </div>
         </div>
