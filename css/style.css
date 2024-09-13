@@ -104,13 +104,26 @@ html {
 }
 
 .btn-primary {
-  background-color: #007bff; /* Primary button color */
-  border-color: #007bff;
+  background: linear-gradient(
+    135deg,
+    #007bff,
+    #0056b3
+  ); /* Gradient background */
+  border: 1px solid #007bff; /* Border color */
+  color: #fff; /* Text color */
+  font-weight: 600; /* Font weight */
+  border-radius: 50px; /* Rounded corners */
+  padding: 0.75rem 1.5rem; /* Padding */
+  text-transform: uppercase; /* Uppercase text */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3, #007bff); /* Gradient on hover */
+  border-color: #0056b3; /* Border color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: translateY(-2px); /* Lift effect */
 }
 
 .form-control {
@@ -137,7 +150,14 @@ html {
 
 .btn-outline-primary {
   color: #007bff;
-  border-color: #007bff;
+  border: 2px solid #007bff; /* Border thickness */
+  background-color: transparent; /* Transparent background */
+  border-radius: 50px; /* Rounded corners */
+  font-weight: 600; /* Font weight */
+  padding: 0.75rem 1.5rem; /* Padding */
+  text-transform: uppercase; /* Uppercase text */
+  transition: all 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
 .btn-primary:hover {
@@ -146,8 +166,15 @@ html {
 }
 
 .btn-outline-primary:hover {
-  color: #0056b3;
-  border-color: #0056b3;
+  color: #fff; /* Text color on hover */
+  border-color: #0056b3; /* Border color on hover */
+  background: linear-gradient(
+    135deg,
+    #007bff,
+    #0056b3
+  ); /* Gradient background */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+  transform: translateY(-2px); /* Lift effect */
 }
 
 .position-relative {
@@ -348,6 +375,7 @@ blockquote {
 .package-card {
   border-radius: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  position: relative; /* Required for badge positioning */
 }
 
 .package-card:hover {
@@ -358,11 +386,15 @@ blockquote {
 .pricing-title {
   font-size: 2.5rem;
   color: #0043a4;
+  text-align: center; /* Center align title */
 }
 
 .package-card ul {
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items horizontally */
 }
 
 .package-card li {
@@ -371,6 +403,7 @@ blockquote {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
+  text-align: center; /* Center align text within the list item */
 }
 
 .package-card li i {
@@ -404,6 +437,7 @@ blockquote {
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center; /* Center align card header text */
 }
 
 /* Gradient Backgrounds for Card Headers */
@@ -424,12 +458,73 @@ blockquote {
 }
 
 /* Badge for Popular Package */
-.popular-package .badge {
+/* General Badge Styling */
+.badge {
   position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1;
+  padding: 0.5em 1em; /* Adjust padding for better visibility */
+  font-size: 1rem; /* Adjust font size for better visibility */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-weight: bold; /* Make text bold */
 }
+
+/* Hot Deal Badge */
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  padding: 0.5em 1em; /* Adjust padding */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-weight: bold; /* Make text bold */
+  display: flex;
+  align-items: center;
+}
+
+/* Hot Deal Badge Specific Styling */
+.hot-deal .badge {
+  background-color: #dc3545; /* Red background */
+  color: #fff; /* White text color */
+}
+
+.hot-deal .fire-icon {
+  width: 1.2em; /* Adjust icon width */
+  height: 1.2em; /* Adjust icon height */
+  margin-left: 0.5em; /* Space between text and icon */
+  vertical-align: middle; /* Align icon vertically in the middle */
+}
+
+/* Badge Styling for Popular */
+.badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1;
+  padding: 0.5em 1em; /* Adjust padding */
+  font-size: 1rem; /* Adjust font size */
+  border-radius: 5px; /* Slightly rounded corners */
+  font-weight: bold; /* Make text bold */
+  display: flex;
+  align-items: center; /* Align icon vertically */
+}
+
+/* Popular Badge Specific Styling */
+.popular-package .badge {
+  background-color: #ffc107; /* Yellow background */
+  color: #000; /* Dark text color */
+}
+
+.popular-package .lightning-icon {
+  width: 1.2em; /* Adjust icon width */
+  height: 1.2em; /* Adjust icon height */
+  margin-left: 0.5em; /* Space between text and icon */
+  vertical-align: middle; /* Align icon vertically in the middle */
+  filter: brightness(0) invert(1); /* Make the icon white or adjust as needed */
+}
+
 
 /* Button Styles */
 .btn-primary {
